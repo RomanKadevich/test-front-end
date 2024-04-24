@@ -1,10 +1,30 @@
 @import "../../vars.scss";
 
-.countdown{
-    
-    &__text{
-       color:$main-text-color;
-       font-size: 72px;
-    }
-
+.countdown {
+  max-width: 700px;
+  margin: 0 auto;
+  &__time,
+  &__gap {
+    color: $main-text-color;
+    font-size: 72px;
+    font-weight: 600;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    padding: 17px 42px 21px 50px;
+    background: url("../../assets/label-countdown-bg.svg") no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    font-size: 16px;
+    color: $light-text-color;
+    text-align: center;
+  }
 }

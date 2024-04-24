@@ -1,40 +1,71 @@
+@import "../../vars.scss";
+
 .main-section {
+  padding-top: 60px;
+  padding-bottom: 76px;
   width: 100vw;
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  //   height: 100vh;
   position: relative;
-  z-index: -2;
+  //   z-index: -2;
+
+  &__left-bg {
+    background-image: url(/src/assets/bg-left.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 865px;
+    height: 714px;
+    left: -450.75px;
+
+    top: -300px;
+    bottom: -306px;
+    transform: rotate(353deg);
+    z-index: -1;
+  }
+
+  &__right-bg {
+    background-image: url(/src/assets/bg-right.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 865px;
+    height: 714.41px;
+    right: -570px;
+    top: -390px;
+
+    transform: rotate(268deg);
+    z-index: -1;
+  }
+  &__title {
+    margin-top: 93px;
+    margin-bottom: 8px;
+    font-family: Poppins;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-color;
+    opacity: 0.39;
+  }
+  &__subtitle {
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: $dark-text-color;
+  }
+  &__text {
+    margin-top: 72px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: $dark-text-color;
+  }
 }
-
-.main-section__left-bg {
-  background-image: url(/src/assets/bg-left.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 865px;
-  height: 714px;
-  left: -450.75px;
-
-  top: -300px;
-  bottom: -306px;
-  transform: rotate(353deg);
-  z-index: -1;
-}
-
-.main-section__right-bg {
-  background-image: url(/src/assets/bg-right.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 865px;
-  height: 714.41px;
-  right: -570px;
-  top: -390px;
-
-  transform: rotate(268deg);
-  z-index: -1;
-}
-
 @media screen and (max-width: 768px) {
   .main-section__left-bg {
     width: 478px;
@@ -49,16 +80,17 @@
   }
 }
 @media screen and (max-width: 560px) {
-  .main-section__left-bg {
-    width: 366px;
-    height: 302px;
-    left: -190px;
-    top: -160px;
-  }
-
-  .main-section__right-bg {
-    right: -560px;
-    top: -460px;
-    transform: rotate(256deg);
+  .main-section {
+    &__left-bg {
+      width: 366px;
+      height: 302px;
+      left: -190px;
+      top: -160px;
+    }
+    &__right-bg {
+      right: -560px;
+      top: -460px;
+      transform: rotate(256deg);
+    }
   }
 }

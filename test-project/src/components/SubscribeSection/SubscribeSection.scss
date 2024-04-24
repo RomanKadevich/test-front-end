@@ -1,0 +1,43 @@
+@import "../../vars.scss";
+
+input[name="email"],
+.MuiInputBase-root {
+  border-radius: 40px !important;
+  width: 440px;
+  background-color: $light-text-color;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
+  color: black !important;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.subscribe {
+  background: $main-color;
+  padding-top: 69px;
+  padding-bottom: 80px;
+  width: 100vw;
+
+  &__form {
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+  }
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 10px 11px;
+    background-color: $countdown-labels-color;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  &__button:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+}

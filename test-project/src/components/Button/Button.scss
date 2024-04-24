@@ -1,0 +1,25 @@
+@import "../../vars.scss";
+
+.button {
+  margin: 0 auto;
+  background-color: $main-color;
+  padding: 16px 20px 16px 28px;
+  border: 0;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+  &__text {
+    color: $light-text-color;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
