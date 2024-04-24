@@ -21,7 +21,7 @@ const MainSection = () => {
       </div>
       <p className="main-section__text">Check our event page when you wait:</p>
 
-      <Button text="Go to the event" isArrowIcon={true}/>
+      <Button text="Go to the event" isArrowIcon={true} />
     </section>
   );
 };
