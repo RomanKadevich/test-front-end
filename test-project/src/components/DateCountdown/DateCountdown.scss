@@ -1,0 +1,10 @@
+@import "../../vars.scss";
+
+.countdown{
+    
+    &__text{
+       color:$main-text-color;
+       font-size: 72px;
+    }
+
+}
