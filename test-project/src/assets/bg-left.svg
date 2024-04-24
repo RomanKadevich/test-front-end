@@ -1,0 +1,20 @@
+<svg width="851.000000" height="688.000000" viewBox="0 0 851 688" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_28_dd" x="-0.819214" y="-0.154663" width="851.318726" height="687.427490" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="10"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_1"/>
+		</filter>
+	</defs>
+	<g filter="url(#filter_1_28_dd)">
+		<path id="Vector" d="M424.43 679.1C528.67 649.65 443.1 572.5 479.47 524.41C523.65 466 872.18 392.28 849.43 295.69C780.95 141.89 575.15 234.96 523.45 179.41C473.33 125.56 385.42 41.13 317.18 13.61C251.86 -12.74 111.99 -12.09 90.16 114.68C76.24 210.04 119.63 233.33 88.67 282.06C55.88 333.65 4.34 376.42 -0.1 437.37C-4.92 503.42 14.15 576.68 64.03 620.25C112.58 662.65 185.81 644.93 249.44 655.32C308.99 665.05 369.43 703.96 424.43 679.1Z" fill="#162C4E" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
