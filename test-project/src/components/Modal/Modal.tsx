@@ -1,5 +1,6 @@
 import { Button } from "../Button/Button";
 import "./Modal.scss";
+import close from "./../../assets/close-btn.svg";
 
 interface IModalType {
   message: string;
@@ -16,7 +17,7 @@ const Modal = ({ message, info, onClose }: IModalType) => {
       <div className="modal" onClick={stopClickHandler}>
         <img
           className="modal__close-icon"
-          src="./src/assets/close-btn.svg"
+          src={close}
           alt="close"
           onClick={onClose}
         />

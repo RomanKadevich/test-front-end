@@ -1,20 +1,19 @@
-import "./App.css";
-import MainSection from "./components/MainSection/MainSection";
-import SubscribeSection from "./components/SubscribeSection/SubscribeSection";
+import "./App.scss";
+import { EventSection } from "./Sections/EventSection/EventSection";
+import MainSection from "./Sections/MainSection/MainSection";
+import SubscribeSection from "./Sections/SubscribeSection/SubscribeSection";
 
 function App() {
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
-      <MainSection />
-      <SubscribeSection />
-    </div>
+    <>
+      <div className="app__wrapper">
+        <MainSection />
+        <SubscribeSection />
+      </div>
+      <div className="app__wrapper">
+        <EventSection />
+      </div>
+    </>
   );
 }
 

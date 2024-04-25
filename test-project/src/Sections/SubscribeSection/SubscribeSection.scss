@@ -16,6 +16,7 @@ input[name="email"]::placeholder {
 }
 
 .subscribe {
+  position: relative;
   background: $main-color;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -46,16 +47,37 @@ input[name="email"]::placeholder {
     opacity: 0.7;
     cursor: default;
   }
+  &__link-next {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    display: flex;
+    margin-right: 108px;
+    align-items: center;
+    color: $light-text-color;
+    cursor: pointer;
+    font-size: 20px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1055px) {
   input[name="email"],
   .MuiInputBase-root {
     width: 280px;
   }
   .subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     &__button {
       padding: 4px 5px;
+    }
+    &__link-next {
+      margin: 0;
+      position: static;
+      font-size: 16px;
     }
   }
   input[name="email"]::placeholder {

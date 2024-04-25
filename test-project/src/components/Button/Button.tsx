@@ -1,4 +1,5 @@
 import "./Button.scss";
+import arrowRight from "../../assets/arrow-right.svg";
 
 interface IButton {
   isButtonLink?: boolean;
@@ -22,15 +23,11 @@ export const Button = ({
     <ButtonComponent
       className={`button ${additionalClassName}`}
       onClick={onClickHandler}
-      href={isButtonLink ? link : undefined} // Only add href for <a> element
+      href={isButtonLink ? link : undefined}
     >
       <span className="button__text">{text}</span>
       {isArrowIcon && (
-        <img
-          src="./src/assets/arrow-right.svg"
-          alt="arrow"
-          className="button__icon"
-        />
+        <img src={arrowRight} alt="arrow" className="button__icon" />
       )}
     </ButtonComponent>
   );
