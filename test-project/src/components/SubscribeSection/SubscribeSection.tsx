@@ -22,7 +22,7 @@ const SubscribeSection = () => {
   } = useForm({
     mode: "onBlur",
     resolver: yupResolver(
-      signInSchema("Email is required", "Email must be a valid email")
+      signInSchema("Email is required", "Email must be a valid")
     ),
   });
   const onSubmit = async ({ email }: Credential) => {

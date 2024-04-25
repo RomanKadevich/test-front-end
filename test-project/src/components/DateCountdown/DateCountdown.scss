@@ -12,7 +12,6 @@
   &__box {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
   }
   &__item {
     display: flex;
@@ -26,5 +25,21 @@
     font-size: 16px;
     color: $light-text-color;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .countdown {
+    max-width: 420px;
+    &__time,
+    &__gap {
+      font-size: 36px;
+    }
+
+    &__label {
+      padding: 14px 23px;
+      font-size: 12px;
+      background-position-y: center;
+    }
   }
 }

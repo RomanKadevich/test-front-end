@@ -1,14 +1,24 @@
 @import "../../vars.scss";
 
 .main-section {
-  padding-top: 60px;
-  padding-bottom: 76px;
+  // padding-top: 61px;
+  // padding-bottom: 50px;
   width: 100vw;
   overflow-x: hidden;
-  //   height: 100vh;
+  height: 100%;
   position: relative;
-  //   z-index: -2;
-
+  z-index: 10;
+  &__container {
+    height: 100%;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap:10%;
+    justify-content: space-around;
+    height: 100%;
+  }
   &__left-bg {
     background-image: url(/src/assets/bg-left.svg);
     background-size: contain;
@@ -38,8 +48,8 @@
     z-index: -1;
   }
   &__title {
-    margin-top: 93px;
-    margin-bottom: 8px;
+    // margin-top: 93px;
+    // margin-bottom: 8px;
     font-family: Poppins;
     font-size: 72px;
     font-weight: 700;
@@ -49,7 +59,7 @@
     opacity: 0.39;
   }
   &__subtitle {
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -57,8 +67,8 @@
     color: $dark-text-color;
   }
   &__text {
-    margin-top: 72px;
-    margin-bottom: 12px;
+    // margin-top: 72px;
+    // margin-bottom: 12px;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -66,21 +76,35 @@
     color: $dark-text-color;
   }
 }
-@media screen and (max-width: 768px) {
-  .main-section__left-bg {
-    width: 478px;
-    height: 394px;
-    left: -250px;
-    top: -200px;
-  }
-  .main-section__right-bg {
-    right: -560px;
-    top: -450px;
-    transform: rotate(262deg);
+@media screen and (max-width: 1055px) {
+  .main-section {
+    &__title {
+      font-size: 36px;
+    }
+    &__subtitle,
+    &__text {
+      font-size: 16px;
+    }
+    &__left-bg {
+      width: 478px;
+      height: 394px;
+      left: -250px;
+      top: -200px;
+
+      &__right-bg {
+        right: -560px;
+        top: -450px;
+        transform: rotate(262deg);
+      }
+    }
   }
 }
 @media screen and (max-width: 560px) {
   .main-section {
+    &__logo {
+      width: 128px;
+      height: 40px;
+    }
     &__left-bg {
       width: 366px;
       height: 302px;

@@ -1,6 +1,7 @@
 @import "../../vars.scss";
 
 .modal {
+  position: relative;
   width: 320px;
   height: 370px;
   background-color: white;
@@ -27,6 +28,13 @@
   &__btn {
     padding-left: 74px;
     padding-right: 74px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    cursor: pointer;
   }
   &__overlay {
     position: fixed;

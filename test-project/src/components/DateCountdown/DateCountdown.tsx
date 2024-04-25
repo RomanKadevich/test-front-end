@@ -1,10 +1,24 @@
 import Countdown, { CountdownRendererFn } from "react-countdown";
 import "./DateCountdown.scss";
+import { useEffect, useState } from "react";
 
 export const DateCountdown = () => {
   const currentDate = new Date();
   const targetDate = new Date("2024-07-24");
   const differenceInMilliseconds = targetDate.getTime() - currentDate.getTime();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const renderer: CountdownRendererFn = ({
     days,
     hours,
@@ -12,17 +26,25 @@ export const DateCountdown = () => {
     seconds,
     completed,
   }) => {
-    const dateLabels = [
-      { label: "Days", time: days },
-      { label: "Hours", time: hours },
-      { label: "Minutes", time: minutes },
-      { label: "Seconds", time: seconds },
-    ];
+    const dateLabels =
+      windowWidth > 768
+        ? [
+            { label: "Days", time: days },
+            { label: "Hours", time: hours },
+            { label: "Minutes", time: minutes },
+            { label: "Seconds", time: seconds },
+          ]
+        : [
+            { label: "DD", time: days },
+            { label: "HH", time: hours },
+            { label: "MM", time: minutes },
+            { label: "SS", time: seconds },
+          ];
     if (completed) {
       return <p className="countdown__text">Finished!!!</p>;
     } else {
       return (
-        <div className="countdown">
+        <div className="countdown animate__animated animate__fadeInDown animate__delay-2s">
           <div className="countdown__box">
             {dateLabels.map((item, index) =>
               index !== dateLabels.length - 1 ? (

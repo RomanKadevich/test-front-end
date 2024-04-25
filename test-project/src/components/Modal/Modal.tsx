@@ -14,6 +14,12 @@ const Modal = ({ message, info, onClose }: IModalType) => {
   return (
     <div className="modal__overlay" onClick={onClose}>
       <div className="modal" onClick={stopClickHandler}>
+        <img
+          className="modal__close-icon"
+          src="./src/assets/close-btn.svg"
+          alt="close"
+          onClick={onClose}
+        />
         <div className="modal__content">
           <h2 className="modal__title">{info}</h2>
           <p className="modal__text">{message}</p>
